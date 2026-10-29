@@ -1,0 +1,9 @@
+Customer ID,Full Name,Email,Signup Date,Plan,Monthly Spend,Active
+ 101 ,  ada LOVELACE ,ADA@EXAMPLE.COM,2024-01-15,pro,"1,200.50",yes
+102,Grace Hopper,grace@example.com,15/02/2024,Basic,300,No
+103,Alan Turing,alan@example,2024-03-01,pro,99.9,true
+104,Katherine Johnson,katherine@example.com,2024-02-30,free,0,N
+105,,margaret@example.com,2024-04-10,pro,450,yes
+101,Ada Lovelace,ada@example.com,2024-01-15,pro,"1,200.50",yes
+106,Linus Torvalds,linus@example.com,03/05/2024,enterprise,15000,1
+107,Barbara Liskov,barbara@example.com,2024-05-20,gold,12,no

@@ -1,0 +1,42 @@
+# Example schema for examples/customers.csv (all data in that file is fictional).
+columns:
+  - name: customer_id
+    aliases: ["Customer ID"]
+    type: integer
+    required: true
+  - name: full_name
+    aliases: ["Full Name"]
+    required: true
+    case: title
+  - name: email
+    aliases: ["Email"]
+    required: true
+    case: lower
+    pattern: '[^@\s]+@[^@\s]+\.[A-Za-z]{2,}'
+  - name: signup_date
+    aliases: ["Signup Date"]
+    type: date
+    date_formats: ["%Y-%m-%d", "%d/%m/%Y"]   # tried in order; 03/05/2024 is read as 3 May
+    required: true
+  - name: plan
+    aliases: ["Plan"]
+    case: lower
+    allowed: [free, basic, pro, enterprise]
+    required: true
+  - name: monthly_spend
+    aliases: ["Monthly Spend"]
+    type: number
+    thousands: ","
+    decimals: 2
+    min: 0
+    default: "0"
+  - name: active
+    aliases: ["Active"]
+    type: boolean
+
+dedupe:
+  key: [customer_id]
+  keep: first
+  action: drop
+
+extra_columns: keep
